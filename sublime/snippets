@@ -1,0 +1,36 @@
+# ~/.config/sublime-text-2/Packages/User
+
+#binding
+<snippet>
+  <content><![CDATA[
+binding.pry
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>bp</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>
+
+#pp (for debugging)
+<snippet>
+  <content><![CDATA[
+p "======================="
+p ${1:this}
+p "======================="
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>pp</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.rb</scope> -->
+</snippet>
+
+#cl (console.log)
+<snippet>
+  <content><![CDATA[
+console.log(${1:})
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>cl</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js, source.coffee</scope>
+</snippet>

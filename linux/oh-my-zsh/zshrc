@@ -1,0 +1,41 @@
+ZSH_THEME="vaski"
+
+# Key Bindings
+bindkey '^[OH' beginning-of-line
+bindkey '^[OF' end-of-line
+bindkey '^[[3~' delete-char
+
+# aliases
+alias ll='ls -lah'
+
+alias subl='~/installations/sublime_text_2/sublime_text'
+alias p_pr='cd ~/projects'
+
+alias ack='ack-grep -Rai'
+alias acki='ack-grep -Ra'
+alias be='bundle exec'
+
+#alias rails='bundle exec rails'
+#alias rake='bundle exec rake'
+#alias rspec='bundle exec rspec'
+
+alias cov='google-chrome ./coverage/index.html'
+
+function rails(){
+  run_bundle_or_spring 'rails' $@
+}
+function rake(){
+  run_bundle_or_spring 'rake' $@
+}
+function rspec(){
+  run_bundle_or_spring 'rspec' $@
+}
+
+function run_bundle_or_spring() {
+  if [ ! -x ./bin/rails ]
+  then
+    bundle exec $1 ${@:2}
+  else
+    ./bin/$1 ${@:2}
+  fi
+}

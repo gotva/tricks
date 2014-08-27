@@ -1,0 +1,42 @@
+# ~/.config/terminator/config
+
+[global_config]
+[keybindings]
+  next_tab = <Control>Tab
+  go_up = <Control>Up
+  move_tab_right = None
+  move_tab_left = None
+  switch_to_tab_1 = <Alt>1
+  split_horiz = <Control>2
+  switch_to_tab_4 = <Alt>4
+  prev_tab = <Shift><Control>Tab
+  switch_to_tab_6 = <Alt>6
+  switch_to_tab_7 = <Alt>7
+  go_down = <Control>Down
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_2 = <Alt>2
+  go_right = <Control>Right
+  go_left = <Control>Left
+  split_vert = <Control>3
+  switch_to_tab_9 = <Alt>9
+  switch_to_tab_8 = <Alt>8
+  switch_to_tab_3 = <Alt>3
+[profiles]
+  [[default]]
+    background_image = None
+    scrollback_lines = 5500
+    cursor_shape = ibeam
+    cursor_color = "#ffffff"
+    foreground_color = "#00ff00"
+    scroll_on_output = False
+    copy_on_selection = True
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
